@@ -54,6 +54,11 @@
 
 (load-theme 'atom-one-dark t)
 
+;; OTHER CONFIG
+
+;; Start Emacs in fullscreen
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 (provide 'init)
 ;;; init.el ends here
 (put 'downcase-region 'disabled nil)
