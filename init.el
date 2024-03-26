@@ -2,10 +2,23 @@
 ;;; Commentary:
 ;;;  ??? - Get smortr
 
+;;; Visuals:
+
+;; Start Emacs in fullscreen
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+;; Set theme to "Atom One Dark"
+(load-theme 'atom-one-dark t)
+
+;; Set default font to "Fira Code", 14 points
+(set-face-attribute 'default nil :family "Fira Code" :height 140)
+
+
 (require 'package)
 
 ;;; Code:
 
+;; Add melpa
 (add-to-list 'package-archives
 	     '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
@@ -55,14 +68,7 @@
 (add-hook 'go-mode-hook (lambda () (setq indent-tabs-mode nil)))
 (add-hook 'go-mode-hook (lambda () (setq tab-width 4)))
 
-;; THEMES
-
-(load-theme 'atom-one-dark t)
-
-;; OTHER CONFIG
-
-;; Start Emacs in fullscreen
-(add-to-list 'default-frame-alist '(fullscreen . maximized))
+;; (To Be Added) OTHER CONFIG
 
 (provide 'init)
 ;;; init.el ends here
