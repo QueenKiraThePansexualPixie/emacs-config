@@ -29,7 +29,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(go-mode flycheck-ocaml lsp-scheme lsp-latex lsp-java lsp-haskell lsp-docker company-lua company-anaconda atom-one-dark-theme multiple-cursors company flycheck lsp-ui lsp-mode tree-sitter-langs tree-sitter rust-mode)))
+   '(cargo-mode go-mode flycheck-ocaml lsp-scheme lsp-latex lsp-java lsp-haskell lsp-docker company-lua company-anaconda atom-one-dark-theme multiple-cursors company flycheck lsp-ui lsp-mode tree-sitter-langs tree-sitter rust-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -61,6 +61,7 @@
 (add-hook 'rust-mode-hook (lambda () (setq indent-tabs-mode nil)))
 (add-hook 'rust-mode-hook #'tree-sitter-mode)
 (add-hook 'rust-mode-hook #'lsp)
+(add-hook 'rust-mode-hook 'cargo-minor-mode)
 
 (require 'go-mode)
 (add-hook 'go-mode-hook #'lsp-deferred)

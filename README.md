@@ -24,6 +24,7 @@ First, install these packages:
 
 - `use-package`
 - `rust-mode`
+- `cargo-mode`
 - `go-mode`
 - `tree-sitter`
 - `tree-sitter-langs`
